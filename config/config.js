@@ -1,4 +1,8 @@
-/**
- * Puerto
- */
-process.env.PORT = process.env.PORT || 8002;
+require('dotenv').config();
+
+const config = {
+    port: process.env.PORT,
+    apiRM: process.env.API_RICK_MORTY
+};
+
+module.exports = { config };
