@@ -1,4 +1,7 @@
-/**
- * Puerto
- */
-process.env.PORT = process.env.PORT || 8002;
+require('dotenv').config();
+
+const config = {
+    port: process.env.PORT
+};
+
+module.exports = { config };
