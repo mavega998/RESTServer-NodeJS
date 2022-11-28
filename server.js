@@ -16,6 +16,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/users', require('./routes/user.router.js'));
+app.use('/api/testRedis', require('./routes/test.router'));
 
 app.listen(app.get('port'), () => {
     console.log(`Server run on port ${app.get('port')}`);
