@@ -8,6 +8,7 @@ const { createClient } = require('redis');
 const client = createClient(config.redisUrlDB);
 
 router.get('/character', async (req, res) => {
+    console.log(config.redisUrlDB)
     await client.connect();
     let response = JSON.parse(await client.get(req.originalUrl));
     if (!response) {
