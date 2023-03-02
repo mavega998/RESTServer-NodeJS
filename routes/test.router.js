@@ -5,7 +5,7 @@ const { config } = require('../config');
 const axios = require('axios');
 const { createClient } = require('redis');
 
-const client = createClient();
+const client = createClient(config.redisUrlDB);
 
 router.get('/character', async (req, res) => {
     await client.connect();
