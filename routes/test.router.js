@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const { config } = require('../config/config');
+const { config } = require('../config');
 const axios = require('axios');
 const { createClient } = require('redis');
 
